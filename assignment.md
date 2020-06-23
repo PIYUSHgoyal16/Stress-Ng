@@ -7,7 +7,7 @@ Ans 1. option **b** is preferable, because signed int will use the only allocate
 
 Bitfields are used to use memory efficiently when we know that the value of a field will always remain in a small range, by specifying the number of bits to be used by the field.
 
-The values a signed integer can take having n bits ranges from 0 to 2^n - 1.
+The values a unsigned integer can take having n bits ranges from 0 to 2^n - 1.
 
 However in case of signed integer the first bit is used for sign determination. Hence the range of values for a signed integer having n bits will be - (2 ^ (n-1)) to 2 ^ (n-1) - 1.
 
@@ -17,7 +17,8 @@ In the given question only one bitfield was assigned. This can be used by the un
 Ans 2
 The given function performs very well for positive arguments less than 31. However the issue arises when this value increases beyond 30.
 
-1) 1 << 32 will be **computed in int**, which will be leading to **overflow**. This can be seen from the attached program. 
+1) 1 << 32 will be **computed in int**, which will be leading to **overflow**.
+ 
 The solution is to typecast 1 into (unsigned long long). The ways can be:
 i) **(unsigned long long) 1 << 32**
 ii) **1ULL << 32**

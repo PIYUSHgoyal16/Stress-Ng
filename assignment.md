@@ -44,6 +44,7 @@ This is an infinite loop leading to **non termination of the program**. This is 
 The easiest solution to fix the bug is to **change the variable to signed integer instead.**
 
 The Modified Code Snippit will look like:
+	
 	int i = 10;
 
 	while (--i >= 0) {
